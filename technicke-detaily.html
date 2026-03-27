@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technické a funkční detaily | ThreeS</title>
+    <meta name="description"
+        content="Technické detaily fungování systému ThreeS informační systém. Bezpečnost a jak procesy vznikají a probíhají na straně serveru i klienta.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_ThreeS.jpg" alt="ThreeS Logo" id="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Hlavní strana</a>
+                <a href="vedeni-zakazek.html">Vedení zakázek</a>
+                <a href="alternativa-excel.html">Alternativa k Excelu</a>
+                <a href="technicke-detaily.html">Technické detaily</a>
+                <a href="o-nas.html">O nás</a>
+                <a href="demo.html">DEMO</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Přepnout motiv">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal">
+            <h1>Technické a funkční detaily</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">Informační systém ThreeS je koncipován jako modulární webové rozhraní pro správu firemních dat s důrazem na bezpečnost a provázanost informací. Přečtěte si, jak jednotlivé procesy fungují do nejmenšího detailu.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+            <div class="detail-content reveal">
+
+                <div class="detail-section">
+                    <h3 style="color: var(--accent-color);"><i class="fas fa-project-diagram"></i> Jak procesy fungují?</h3>
+                    <p>Obdržíte poptávku. Vytvoříte nabídku. Obdržíte objednávku. Na jejím základě založíte zakázku, kterou spárujete s nabídkou i objednávkou. Od teď už všechny vytvářené dokumenty přebírají atributy zakázky.</p>
+                    <p>Vytvoříte harmonogram. Spustíte poptávkové řízení na dodávku komponentů a po jeho vyhodnocení rozešlete objednávky. Máte přehled o dílčím plnění objednávek. Vystavujete dodací listy a protokoly o předání. Evidujete jejich podepsané verze. Fakturujete.</p>
+                    <p>Při všech těchto krocích vidíte okamžitý finanční stav zakázky i termíny. Pokud někde něco drhne, ThreeS vás na to upozorní.</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3 style="color: var(--accent-color);"><i class="fas fa-users-cog"></i> Máte různé typy zákazníků a procesy musí být odlišné?</h3>
+                    <p>Každá zakázka je nositelem informace Kategorie záznamu. Standardní je kategorie 01, což vyhoví ve většině případů.</p>
+                    <p>Máte-li jiné požadavky, je k dispozici celkem 20 kategorií, které lze nadefinovat podle Vašich představ - odlišné typy dokumentů, procesní postupy... Přístup ke kategoriím lze aplikovat i na uživatele.</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3 style="color: var(--accent-color);"><i class="fas fa-file-signature"></i> Měníte své dokumenty za pochodu?</h3>
+                    <p>Není problém. U každého typu dokumentu lze nastavit, zda může mít varianty, jaké atributy má dědit, které jsou povinné a které ne. Můžete mít připraveno 20 různých typů šablon od každého dokumentu. Samozřejmostí jsou různé jazykové verze, které se přednastavují podle jazyka obchodního partnera.</p>
+                    <p>Dokumenty lze používat jako schvalovatelné vyšší autoritou, anebo neschvalovatelné. Jednotlivá oprávnění lze nastavit podle libosti. Lze zamezit přístupu uživatelů k určitým typům dokumentů anebo k určitým typům informací (finanční, obchodní).</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3 style="color: var(--accent-color);"><i class="fas fa-mail-bulk"></i> Příchozí pošta</h3>
+                    <p><strong>Jste zavaleni příchozími mejly a stále hledáte, kde nebo u koho je nějaký příchozí dopis?</strong></p>
+                    <p>V Příchozí poště se evidují veškeré informace/dokumenty, které nemají původ v ThreeSu. Ať už potvrzení termínu objednávek, přijaté faktury anebo reklamace, vše je evidováno a roztříděno podle zakázek anebo účelu. Uložte si naskenované dokumenty nebo přímo PDF či mejly samotné.</p>
+                    <p><strong>Už nikdy nebudete pátrat, u koho daná informace v písemné podobě vězí.</strong></p>
+                </div>
+
+                <div class="glass-card detail-section" style="padding: 2rem; border-left: 5px solid #2ecc71;">
+                    <h3><i class="fas fa-gift" style="color: #2ecc71;"></i> BONUS - Máte každoroční problém s neukončenými zakázkami?</h3>
+                    <p><strong>Taky řešíte zakázkové náklady přijaté až po vystavení vaší faktury?</strong></p>
+                    <p>Tyto praktické problémy, které se týkají téměř všech, co mají "jednoduché účetnictví", řeší ThreeS velmi elegantně a výrazně ulehčí vaší účetní či administrativě život. To, co musí finančnictví znalá osoba pracně provádět na počátku každého roku před podáním daňového přiznání, dokáže proškolený uživatel v ThreeSu na pár kliknutí.</p>
+                    <p>Tuto funkci ocení každý, kdo již měl tu čest s finanční kontrolou a pak nesl její následky.</p>
+                </div>
+
+                <!-- Images from md -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem; margin-bottom: 3rem;" class="reveal">
+                    <div class="glass-card" style="padding: 1rem; text-align: center;">
+                        <img src="images/img6.jpg" alt="Zobrazení dot.S-man" title="dot.S-man" style="width: 100%; border-radius: 8px;" loading="lazy">
+                    </div>
+                    <div class="glass-card" style="padding: 1rem; text-align: center;">
+                        <img src="images/img7.jpg" alt="Zobrazení Stav zakázek" title="Stav zakázek" style="width: 100%; border-radius: 8px;" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Bezpecnost (from detail.html context) -->
+                <div class="detail-section" style="margin-top: 4rem;">
+                    <h2><i class="fas fa-shield-alt"></i> Bezpečnost na prvním místě</h2>
+                    <p>ThreeS běží na vzdáleném serveru a klade extrémní důraz na zabezpečení vašich dat a informací. Aplikace může být součástí vašeho stávajícího systému, nebo nainstalovaná na pronajatém serveru.</p>
+                    <ul class="detail-list">
+                        <li><strong>Šifrovaný přenos (VPN):</strong> Veškeré připojení uživatelů probíhá šifrovaně pomocí VPN.</li>
+                        <li><strong>Šifrované soubory:</strong> I při fyzickém přístupu k disku je nelze v systému bez oprávnění přečíst.</li>
+                        <li><strong>Granulární oprávnění:</strong> Několikastupňová úroveň uživatelských oprávnění s detailním nastavením.</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h2><i class="fas fa-laptop-code"></i> Technické požadavky</h2>
+                    <ul class="detail-list">
+                        <li><strong>Klientská stanice -</strong> PC s operačním systémem Windows (kvůli plné kompatibilitě dokumentů) a moderním prohlížečem.</li>
+                        <li><strong>Internetové připojení -</strong> Pro plynulou práci s objemnými přílohami je doporučena symetrická linka (min. 30/30 MBit).</li>
+                        <li><strong>VPN Klient -</strong> Vytvoření bezpečného tunelu k serveru.</li>
+                        <li><strong>Server -</strong> Vlastní nebo pronajatý výkonný počítač, připojený rychlou linkou k internetu, s nainstalovanou aplikací ThreeS. Operační systém Windows Server plus Microsoft Office.</li>
+                    </ul>
+                </div>
+
+                <div class="detail-section" style="margin-bottom: 4rem;">
+                    <h2><i class="fas fa-chart-line"></i> Přínosy řešení</h2>
+                    <ul class="detail-list">
+                        <li><strong>Eliminace duplicit:</strong> Data se zadávají pouze jednou a propisují se celým procesem.</li>
+                        <li><strong>Vzdálená práce:</strong> Možnost plnohodnotného přístupu k firemním datům z domova nebo z terénu.</li>
+                        <li><strong>Nezávislost na HW:</strong> Při poruše počítače stačí nový stroj s prohlížečem a VPN přístupem; veškerá data jsou uložená na serveru.</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="has-text-centered" style="margin-top: 2rem; text-align: center;">
+                <a href="demo.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">Nechci jen číst, chci to rovnou vyzkoušet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
+                        <img src="images/logo_ThreeS.jpg" alt="ThreeS Logo">
+                    </a>
+                    <p style="font-size: 0.95rem; margin-top: 1rem;">Komplexní správa firemních procesů, projektů a dokumentace. ThreeS není účetním programem, ThreeS je správcem informací.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Odkazy</h3>
+                    <ul class="footer-links">
+                        <li><a href="vedeni-zakazek.html">Vedení zakázek</a></li>
+                        <li><a href="alternativa-excel.html">Alternativa k Excelu</a></li>
+                        <li><a href="technicke-detaily.html">Technické detaily</a></li>
+                        <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="demo.html">DEMO přístup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Kontakt</h3>
+                    <p><a href="mailto:podpora@threes.cz" style="color: inherit; text-decoration: none;"><i class="fas fa-envelope" style="color: var(--accent-color);"></i> podpora@threes.cz</a></p>
+                    <p><a href="tel:+420604748927" style="color: inherit; text-decoration: none;"><i class="fas fa-phone-alt" style="color: var(--accent-color);"></i> +420 604 748 927</a></p>
+                    <p style="font-size: 0.85rem; padding-left: 1.5rem; margin-top: -0.5rem;">(včetně podpory přes SMS a WhatsApp)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ThreeS. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
