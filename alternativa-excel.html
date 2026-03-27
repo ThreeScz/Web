@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternativa k Excelu | ThreeS</title>
+    <meta name="description"
+        content="Zakázky v Excelu a dokumenty v e-mailech? ThreeS shromažďuje všechny informace o zakázce na jednom místě.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_ThreeS.jpg" alt="ThreeS Logo" id="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Hlavní strana</a>
+                <a href="vedeni-zakazek.html">Vedení zakázek</a>
+                <a href="alternativa-excel.html">Alternativa k Excelu</a>
+                <a href="technicke-detaily.html">Technické detaily</a>
+                <a href="o-nas.html">O nás</a>
+                <a href="demo.html">DEMO</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Přepnout motiv">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal">
+            <h1>Poznáváte tuto situaci?</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">Zakázky evidujete v Excelu, dokumenty v různých verzích posíláte individuálně e-mailem a skutečné náklady zakázky se počítají obtížně.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section">
+        <div class="container">
+            
+            <div class="glass-card reveal" style="padding: 3rem; margin-bottom: 3rem; border-left: 5px solid #ff4757;">
+                <h3><i class="fas fa-exclamation-triangle" style="color: #ff4757; margin-right: 10px;"></i> Typické problémy s Excelem:</h3>
+                <ul class="detail-list" style="margin-top: 1rem;">
+                    <li>dokumenty jsou na různých místech ve více verzích</li>
+                    <li>komunikace se ztrácí v e-mailech</li>
+                    <li>nejasný přehled nákladů zakázky</li>
+                    <li>přehled zakázek a jejich historie téměř není</li>
+                </ul>
+            </div>
+            
+            <div class="glass-card reveal" style="padding: 3rem; margin-bottom: 4rem; border-left: 5px solid var(--accent-color);">
+                <h3><i class="fas fa-magic" style="color: var(--accent-color); margin-right: 10px;"></i> Jak to řeší ThreeS</h3>
+                <p style="font-size: 1.15rem; margin-top: 1rem;">Všechny informace o zakázce naleznete na jednom místě - dokumenty, komunikace, náklady, termíny, fakturace.</p>
+            </div>
+
+            <div class="features-grid" style="margin-bottom: 3rem;">
+                <div class="glass-card detail-section reveal">
+                    <h3><i class="fas fa-tasks"></i> Řízení zakázek</h3>
+                    <ul class="detail-list">
+                        <li>globální přehled</li>
+                        <li>náklady</li>
+                        <li>termíny</li>
+                        <li>historie</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card detail-section reveal" style="transition-delay: 0.1s;">
+                    <h3><i class="fas fa-file-alt"></i> Správa dokumentů</h3>
+                    <ul class="detail-list">
+                        <li>nabídky a objednávky</li>
+                        <li>dodací listy</li>
+                        <li>předávací protokoly</li>
+                        <li>faktury a mnohé další</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card detail-section reveal" style="transition-delay: 0.2s;">
+                    <h3><i class="fas fa-comments"></i> Evidence komunikace</h3>
+                    <ul class="detail-list">
+                        <li>příchozí pošta</li>
+                        <li>dokumenty, certifikáty</li>
+                        <li>e-maily</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card detail-section reveal" style="transition-delay: 0.3s;">
+                    <h3><i class="fas fa-user-tie"></i> Správa zaměstnanců</h3>
+                    <ul class="detail-list">
+                        <li>oprávnění a osobní údaje</li>
+                        <li>směnovnice</li>
+                        <li>mzdové náklady</li>
+                        <li>přehled úkolů</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card detail-section reveal" style="transition-delay: 0.4s; grid-column: 1 / -1;">
+                    <h3><i class="fas fa-cogs"></i> Automatizace</h3>
+                    <ul class="detail-list" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                        <li style="flex: 1 1 200px;">generování dokumentů včetně verzí</li>
+                        <li style="flex: 1 1 200px;">poptávkové řízení</li>
+                        <li style="flex: 1 1 200px;">přehled nákladů</li>
+                        <li style="flex: 1 1 200px;">výstup pro účetní</li>
+                        <li style="flex: 1 1 200px;">export zvolených přehledů</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Moduly Image Showcase -->
+             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 4rem;" class="reveal">
+                <div class="glass-card" style="padding: 1rem; text-align: center;">
+                    <img src="images/img4.jpg" alt="Zobrazení nákladů" title="Náklady" style="width: 100%; border-radius: 8px;" loading="lazy">
+                </div>
+                <div class="glass-card" style="padding: 1rem; text-align: center;">
+                    <img src="images/img5.jpg" alt="Přehled Modulů" title="Přehled modulů" style="width: 100%; border-radius: 8px;" loading="lazy">
+                </div>
+            </div>
+
+            <div class="has-text-centered reveal" style="margin-top: 4rem; text-align: center;">
+                <h3 style="margin-bottom: 2rem;">Vyzkoušejte si to sami:</h3>
+                <a href="demo.html" class="btn btn-primary" style="margin-right: 1rem;">Vyzkoušet DEMO</a>
+                <a href="mailto:podpora@threes.cz" class="btn btn-outline">Domluvit konzultaci</a>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">Nezávazná konzultace. Bez závazků.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
+                        <img src="images/logo_ThreeS.jpg" alt="ThreeS Logo">
+                    </a>
+                    <p style="font-size: 0.95rem; margin-top: 1rem;">Komplexní správa firemních procesů, projektů a dokumentace. ThreeS není účetním programem, ThreeS je správcem informací.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Odkazy</h3>
+                    <ul class="footer-links">
+                        <li><a href="vedeni-zakazek.html">Vedení zakázek</a></li>
+                        <li><a href="alternativa-excel.html">Alternativa k Excelu</a></li>
+                        <li><a href="technicke-detaily.html">Technické detaily</a></li>
+                        <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="demo.html">DEMO přístup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Kontakt</h3>
+                    <p><a href="mailto:podpora@threes.cz" style="color: inherit; text-decoration: none;"><i class="fas fa-envelope" style="color: var(--accent-color);"></i> podpora@threes.cz</a></p>
+                    <p><a href="tel:+420604748927" style="color: inherit; text-decoration: none;"><i class="fas fa-phone-alt" style="color: var(--accent-color);"></i> +420 604 748 927</a></p>
+                    <p style="font-size: 0.85rem; padding-left: 1.5rem; margin-top: -0.5rem;">(včetně podpory přes SMS a WhatsApp)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ThreeS. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

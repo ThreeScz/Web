@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThreeS | Informační systém pro malé firmy</title>
+    <title>ThreeS | Software pro vedení zakázek pro malé firmy</title>
     <meta name="description"
-        content="Informační systém ThreeS pro komplexní správu firemních procesů, projektů a dokumentace.">
+        content="Mějte zakázky, dokumenty a náklady na jednom místě. Informační systém pro firmy, kterým již Excel nestačí.">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for icons -->
@@ -23,15 +23,17 @@
     <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/logo_ThreeS.jpg" alt="ThreeS Logo" id="nav-logo">
             </a>
             <nav class="nav-links">
-                <a href="#co-je-threes">O systému</a>
-                <a href="#proc-threes">Proč ThreeS</a>
-                <a href="#obsah">Moduly</a>
-                <a href="#bezpecnost">Bezpečnost</a>
-                <a href="#kontakt">Kontakt</a>
+                <a href="index.html">Hlavní strana</a>
+                <a href="vedeni-zakazek.html">Vedení zakázek</a>
+                <a href="alternativa-excel.html">Alternativa k Excelu</a>
+                <a href="technicke-detaily.html">Technické detaily</a>
+                <a href="o-nas.html">O nás</a>
+                <a href="demo.html">DEMO</a>
+                <a href="kontakt.html">Kontakt</a>
             </nav>
             <button class="theme-toggle" id="theme-toggle" aria-label="Přepnout motiv">
                 <i class="fas fa-moon"></i>
@@ -43,196 +45,53 @@
     <section class="hero" id="domu">
         <div class="container hero-grid">
             <div class="hero-content reveal active">
-                <h1>Správce informací pro vaši firmu</h1>
-                <p>ThreeS je webová aplikace určená pro komplexní správu firemních procesů, projektů a dokumentace.
-                    Ucelený pohled na zakázky bez složitosti velkých korporátních neohrabaných systémů.</p>
+                <h1>Software pro vedení zakázek pro malé firmy</h1>
+                <p><strong>Mějte zakázky, dokumenty a náklady na jednom místě.</strong></p>
+                <p>Informační systém pro firmy, kterým již Excel nestačí.</p>
+                <p>ThreeS je webová aplikace určená pro komplexní správu firemních procesů, projektů a dokumentace. Nabízí ucelený pohled na zakázky bez složitých systémů.</p>
                 <div class="hero-actions">
-                    <a href="#kontakt" class="btn btn-primary">Chci vyzkoušet DEMO</a>
-                    <a href="detail.html" class="btn btn-outline">Technické detaily</a>
+                    <a href="demo.html" class="btn btn-primary">Vyzkoušet DEMO</a>
+                    <a href="technicke-detaily.html" class="btn btn-outline">Technické detaily</a>
                 </div>
             </div>
             <div class="hero-image-wrap reveal active">
                 <div class="glass-card">
-                    <!-- Ukázkový hlavní obrázek (použijeme např zakazky) -->
-                    <img src="images/zakazky.jpg" alt="Ukázka systému ThreeS - Zakázky" loading="lazy">
+                    <img src="images/img1.jpg" alt="Ukázka systému ThreeS - Hlavní obrazovka" title="Malý, ale silný. ThreeS." loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Co je ThreeS -->
-    <section class="section" id="co-je-threes">
+    <!-- Funkce sekce -->
+    <section class="section">
         <div class="container">
-            <div class="text-center reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2>Co je ThreeS?</h2>
-                <p>ThreeS je informační systém určený pro malé až střední firmy. Na nic si nehraje. Nechce svými
-                    možnostmi konkurovat velkým korporátním systémům, ale nabízí chytrá, ucelená a bezpečná řešení.</p>
-            </div>
-
             <div class="features-grid">
                 <div class="glass-card feature-card reveal">
                     <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
                     <h3>Komplexní správa</h3>
-                    <p>Ucelený pohled na řízení zakázek, náklady, správu interních dokumentů a evidenci pošty na jednom
-                        místě.</p>
+                    <p>Ucelený pohled na řízení zakázek, náklady, správu interních dokumentů a evidenci pošty na jednom místě.</p>
                 </div>
                 <div class="glass-card feature-card reveal" style="transition-delay: 0.1s;">
                     <div class="feature-icon"><i class="fas fa-link"></i></div>
                     <h3>Provázanost</h3>
-                    <p>Všechny vytvářené dokumenty (nabídky, objednávky, atd.) automaticky přebírají atributy zadané
-                        zakázky.</p>
+                    <p>Všechny vytvářené dokumenty (nabídky, objednávky, dodací listy atd.) automaticky přebírají atributy zadané zakázky.</p>
                 </div>
                 <div class="glass-card feature-card reveal" style="transition-delay: 0.2s;">
                     <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
                     <h3>Základní účetnictví</h3>
-                    <p>Součástí systému jsou funkce pro správu fakturací. Získáte okamžitý přehled finančního stavu a
-                        plnění termínů.</p>
+                    <p>Součástí systému jsou funkce pro správu fakturací. Získáte okamžitý přehled finančního stavu a plnění termínů.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Proč ThreeS -->
-    <section class="section" id="proc-threes">
-        <div class="container reveal">
-            <div class="glass-card" style="padding: 4rem;">
-                <h2 style="text-align: center; margin-bottom: 2rem;">Proč přejít na ThreeS?</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.15rem;">
-                    Pokud používáte pro přehled o svých zakázkách jen "chytrou" excelovou tabulku, nastane jednoho dne
-                    okamžik, kdy vás přestane bavit její neustálé rozšiřování, tvorba vazeb či psaní maker.
-                </p>
-                <br>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.15rem;">
-                    <strong>To je také důvod, proč ThreeS vznikl.</strong> Aby ušetřil uživatelům čas s vymýšlením
-                    pravidel, a oni se mohli orientovat výhradně na samotné informace potřebné pro růst byznysu. ThreeS
-                    umožňuje okamžitý přístup ke všem potřebným informacím vašich zakázek.
-                </p>
+            
+            <div class="glass-card reveal" style="margin-top: 3rem; text-align: center; padding: 3rem;">
+                <div class="feature-icon" style="justify-content: center;"><i class="fas fa-users"></i></div>
+                <h3 style="margin-top: 1rem;">Evidence a správa zaměstnanců</h3>
+                <p style="max-width: 800px; margin: 0 auto;">Docházka i finanční náklady jednotlivých pracovníků ve vztahu k zakázkám, jejich oprávnění v informačním systému, osobní údaje. Vše na jednom místě.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Moduly -->
-    <section class="section" id="obsah">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 4rem;" class="reveal">Co systém obsahuje</h2>
-
-            <!-- Modul 1 -->
-            <div style="display: grid;" class="img-left reveal">
-                <div class="glass-card module-img-container" style="padding: 1rem;">
-                    <img src="images/docmen.jpg" alt="Modul dot.S-man a dokumenty" class="module-img" loading="lazy">
-                </div>
-                <div>
-                    <h3>Základní modul dot.S-man</h3>
-                    <p>Zde se vytváří všechny interní dokumenty - nabídky, objednávky, harmonogramy, dodací listy,
-                        předávací protokoly, faktury, směrnice, prohlášení o shodě a mnohé jiné.</p>
-                    <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
-                                style="color: var(--accent-color); margin-right: 10px;"></i> Poptávkové řízení materiálu
-                            a služeb</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check"
-                                style="color: var(--accent-color); margin-right: 10px;"></i> Automatické generování
-                            objednávek</li>
-                    </ul>
-                </div>
+            
+            <div class="has-text-centered" style="margin-top: 4rem; text-align: center;">
+                <a href="vedeni-zakazek.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">Další informace o vedení zakázek</a>
             </div>
-
-            <!-- Modul 2 -->
-            <div style="display: grid;" class="img-right reveal">
-                <div>
-                    <h3>Moduly Zakázky a Pošta</h3>
-                    <p>Modul <strong>Zakázky</strong> poskytuje strukturovaný přehled nákladů, termínů, dokumentů,
-                        veškeré příchozí pošty atp. Vše je jasně vztaženo ke každé zakázce samostatně.</p>
-                    <p>Modul <strong>Pošta</strong> eviduje příchozí komunikaci a umožňuje její efektivní a rychlé
-                        třídění podle zakázek a priorit.</p>
-                </div>
-                <div class="glass-card module-img-container" style="padding: 1rem;">
-                    <img src="images/posta.jpg" alt="Modul Pošta a evidence" class="module-img" loading="lazy">
-                </div>
-            </div>
-
-            <div class="text-center" style="text-align: center; margin-top: 3rem;">
-                <a href="detail.html" class="btn btn-outline">Prohlédnout technické detaily <i
-                        class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bezpečnost -->
-    <section class="section" id="bezpecnost">
-        <div class="container">
-            <div class="glass-card reveal">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
-                    <div>
-                        <h2>Bezpečnost na prvním místě</h2>
-                        <p>ThreeS běží na vzdáleném serveru a klade extrémní důraz na zabezpečení vašich dat a
-                            informací. Aplikace může být součástí vašeho stávajícího systému, nebo nainstalovaná na
-                            pronajatém serveru.</p>
-                    </div>
-                    <div>
-                        <ul style="list-style: none;">
-                            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-                                <div style="color: var(--accent-color); font-size: 1.5rem;"><i
-                                        class="fas fa-shield-alt"></i></div>
-                                <div>
-                                    <h4 style="margin-bottom: 0.2rem;">Šifrovaný přenos (VPN)</h4>
-                                    <p style="font-size: 0.95rem;">Veškeré připojení uživatelů probíhá šifrovaně.</p>
-                                </div>
-                            </li>
-                            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-                                <div style="color: var(--accent-color); font-size: 1.5rem;"><i class="fas fa-lock"></i>
-                                </div>
-                                <div>
-                                    <h4 style="margin-bottom: 0.2rem;">Šifrované soubory</h4>
-                                    <p style="font-size: 0.95rem;">I při fyzickém přístupu k disku je nelze v systému
-                                        bez oprávnění přečíst.</p>
-                                </div>
-                            </li>
-                            <li style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-                                <div style="color: var(--accent-color); font-size: 1.5rem;"><i
-                                        class="fas fa-user-shield"></i></div>
-                                <div>
-                                    <h4 style="margin-bottom: 0.2rem;">Granulární oprávnění</h4>
-                                    <p style="font-size: 0.95rem;">Několikastupňová úroveň uživatelských oprávnění s
-                                        detailním nastavením.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Zaujalo vás to? (CTA) -->
-    <section class="section cta-section" id="kontakt">
-        <!-- Decoration bubbles -->
-        <div class="blob blob-1" style="width: 300px; height: 300px; right: 0; top: 0; left: auto;"></div>
-
-        <div class="container cta-box reveal">
-            <h2>Zaujalo vás to?</h2>
-            <p style="font-size: 1.25rem; margin-bottom: 2.5rem;">Potřebujete znát podrobnosti nebo si chcete ThreeS
-                rovnou vyzkoušet na vlastní kůži? Ozvěte se nám k dohodnutí přístupu do <strong>DEMO verze</strong>.</p>
-
-            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
-                <a href="mailto:podpora@threes.cz" class="glass-card"
-                    style="display: flex; flex-direction: column; align-items: center; padding: 1.5rem 2.5rem; text-decoration: none; color: inherit;">
-                    <i class="fas fa-envelope"
-                        style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-                    <strong>podpora@threes.cz</strong>
-                </a>
-                <a href="tel:+420604748927" class="glass-card"
-                    style="display: flex; flex-direction: column; align-items: center; padding: 1.5rem 2.5rem; text-decoration: none; color: inherit;">
-                    <i class="fas fa-phone-alt"
-                        style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-                    <strong>+420 604 748 927</strong>
-                    <span style="font-size: 0.85rem; color: var(--text-secondary);">(vč. SMS a WhatsApp)</span>
-                </a>
-            </div>
-
-            <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
-                Jste začínající firma, hlídáte si každou korunu a bojíte se, že pořízení systému pro vás bude finančně
-                neúnosné? <strong>Ozvěte se, určitě najdeme řešení.</strong>
-            </p>
         </div>
     </section>
 
@@ -241,27 +100,26 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
                         <img src="images/logo_ThreeS.jpg" alt="ThreeS Logo">
                     </a>
-                    <p style="font-size: 0.95rem; margin-top: 1rem;">Komplexní správa firemních procesů, projektů a
-                        dokumentace. ThreeS není účetním programem, ThreeS je správcem informací.</p>
+                    <p style="font-size: 0.95rem; margin-top: 1rem;">Komplexní správa firemních procesů, projektů a dokumentace. ThreeS není účetním programem, ThreeS je správcem informací.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Odkazy</h3>
                     <ul class="footer-links">
-                        <li><a href="#co-je-threes">O systému</a></li>
-                        <li><a href="#obsah">Moduly a funkce</a></li>
-                        <li><a href="detail.html">Technické detaily</a></li>
-                        <li><a href="#kontakt">Kontakt</a></li>
+                        <li><a href="vedeni-zakazek.html">Vedení zakázek</a></li>
+                        <li><a href="alternativa-excel.html">Alternativa k Excelu</a></li>
+                        <li><a href="technicke-detaily.html">Technické detaily</a></li>
+                        <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="demo.html">DEMO přístup</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-contact">
                     <h3>Kontakt</h3>
-                    <p><i class="fas fa-envelope" style="color: var(--accent-color);"></i> podpora@threes.cz</p>
-                    <p><i class="fas fa-phone-alt" style="color: var(--accent-color);"></i> +420 604 748 927</p>
-                    <p style="font-size: 0.85rem; padding-left: 1.5rem; margin-top: -0.5rem;">(včetně podpory přes SMS a
-                        WhatsApp)</p>
+                    <p><a href="mailto:podpora@threes.cz" style="color: inherit; text-decoration: none;"><i class="fas fa-envelope" style="color: var(--accent-color);"></i> podpora@threes.cz</a></p>
+                    <p><a href="tel:+420604748927" style="color: inherit; text-decoration: none;"><i class="fas fa-phone-alt" style="color: var(--accent-color);"></i> +420 604 748 927</a></p>
+                    <p style="font-size: 0.85rem; padding-left: 1.5rem; margin-top: -0.5rem;">(včetně podpory přes SMS a WhatsApp)</p>
                 </div>
             </div>
             <div class="footer-bottom">
