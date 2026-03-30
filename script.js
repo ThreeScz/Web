@@ -73,4 +73,24 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+
+    // Zvýraznění aktivní položky menu
+    const currentUrl = window.location.href;
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        const targetHref = link.getAttribute('href');
+        // Přeskočíme index.html v první vlně, řešíme jej zvlášť
+        if (targetHref !== 'index.html' && currentUrl.includes(targetHref)) {
+            link.classList.add('nav-active');
+        }
+    });
+
+    // Ošetření pro indexové stránky (Homepage)
+    if (currentUrl.endsWith('/') || currentUrl.endsWith('index.html') || !currentUrl.includes('.html')) {
+        const homeLink = document.querySelector('.nav-links a[href="index.html"]');
+        if (homeLink) {
+            homeLink.classList.add('nav-active');
+        }
+    }
 });

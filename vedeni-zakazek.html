@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedení zakázek | ThreeS</title>
-    <meta name="description"
-        content="Správce informací pro vaši firmu. Získejte okamžitý přehled zakázek, komunikace a nákladů.">
+    <title>Systém pro vedení zakázek | ThreeS</title>
+    <meta name="description" content="Komplexní správa firemních procesů, projektů a dokumentace. ThreeS není účetním programem, ThreeS je správcem informací navržený pro malé firmy.">
+    <meta name="keywords" content="systém pro vedení zakázek, informační systém pro malé firmy, správa zakázek">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
@@ -29,6 +28,7 @@
                 <a href="alternativa-excel.html">Alternativa k Excelu</a>
                 <a href="technicke-detaily.html">Technické detaily</a>
                 <a href="o-nas.html">O nás</a>
+                <a href="threes-praxe.html">ThreeS v praxi</a>
                 <a href="demo.html">DEMO</a>
                 <a href="kontakt.html">Kontakt</a>
             </nav>
@@ -42,61 +42,91 @@
     <section class="page-header">
         <div class="container reveal">
             <h1>Správce informací pro vaši firmu</h1>
-            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Komplexní správa firemních procesů, projektů a dokumentace. ThreeS není účetním programem, ThreeS je správcem informací.</p>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto;">Komplexní správa firemních procesů, projektů a dokumentace. ThreeS není účetním programem, ThreeS je správcem informací.</p>
         </div>
     </section>
 
-    <!-- Content -->
-    <section class="section">
+    <!-- Content Section -->
+    <section class="section" style="padding-top: 2rem;">
         <div class="container">
-            <div class="glass-card reveal" style="padding: 3rem; margin-bottom: 3rem;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <!-- Comparison Grid (Předtím / Potom) -->
+            <div class="hero-grid" style="margin-bottom: 6rem; align-items: stretch;">
+                
+                <!-- Předtím -->
+                <div class="glass-card reveal" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
-                        <h3 style="color: var(--accent-color);"><i class="fas fa-search-dollar"></i> Taky to takhle máte?</h3>
-                        <ul class="detail-list" style="margin-top: 1rem;">
+                        <h2 style="color: #ef4444; border-bottom: 2px solid rgba(239, 68, 68, 0.3); padding-bottom: 1rem; margin-bottom: 2rem;">Taky to takhle máte?</h2>
+                        <ul class="detail-list" style="margin-bottom: 2rem;">
                             <li>zakázky jsou v Excelu</li>
                             <li>dokumenty v e-mailech</li>
                             <li>náklady se počítají ručně</li>
                             <li>nikdo nezná aktuální stav zakázky</li>
                         </ul>
                     </div>
+                    <div class="img-wrapper" data-tooltip="Předtím." style="text-align: center;">
+                        <img src="images/obrazek_2.jpg" alt="Zmatek před ThreeS" class="module-img" style="max-height: 250px; object-fit: contain; width: auto; max-width: 100%; border-radius: 12px;">
+                    </div>
+                </div>
+
+                <!-- Potom -->
+                <div class="glass-card reveal" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--accent-color);">
                     <div>
-                        <h3 style="color: var(--accent-color);"><i class="fas fa-check-circle"></i> Vše pohromadě v ThreeS</h3>
-                        <ul class="detail-list" style="margin-top: 1rem;">
+                        <h2 style="color: #10b981; border-bottom: 2px solid rgba(16, 185, 129, 0.3); padding-bottom: 1rem; margin-bottom: 2rem;">Vše pohromadě</h2>
+                        <ul class="detail-list" style="margin-bottom: 2rem;">
                             <li>přehled všech zakázek včetně historie</li>
                             <li>dokumenty a komunikace na jednom místě</li>
                             <li>okamžitý přehled nákladů a termínů</li>
                         </ul>
                     </div>
+                    <div class="img-wrapper" data-tooltip="Potom." style="text-align: center;">
+                        <img src="images/obrazek_3.jpg" alt="Pořádek s ThreeS" class="module-img" style="max-height: 250px; object-fit: contain; width: auto; max-width: 100%; border-radius: 12px;">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="glass-card reveal" style="text-align: center; padding: 4rem; margin-bottom: 4rem;">
+                <h2 style="margin-bottom: 2rem;">ThreeS je informační systém navržený speciálně pro malé firmy</h2>
+                <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <i class="fas fa-rocket" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 1.25rem;">Jednoduché nasazení</h3>
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <i class="fas fa-desktop" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 1.25rem;">Přehledné ovládání</h3>
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <i class="fas fa-ban" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <h3 style="font-size: 1.25rem;">Žádné složité implementace</h3>
+                    </div>
+                </div>
+                <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-primary);">
+                    ERP systém bez složitosti velkých ERP systémů. Prostě ThreeS.
+                </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-box reveal" style="text-align: center;">
+                <h2>Vyzkoušejte ThreeS</h2>
+                <ul class="detail-list" style="display: inline-block; text-align: left; margin-bottom: 2.5rem;">
+                    <li><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> DEMO přístup</li>
+                    <li><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> online ukázka systému</li>
+                    <li><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> nezávazná konzultace</li>
+                    <li><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> bez závazků</li>
+                </ul>
+                <div class="hero-actions" style="justify-content: center;">
+                    <a href="demo.html" class="btn btn-primary">DEMO přístup</a>
+                    <a href="mailto:podpora@threes.cz" class="btn btn-outline">Domluvit konzultaci</a>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <a href="alternativa-excel.html" style="font-size: 1.1rem; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem;">
+                        Další stránka: Alternativa k Excelu <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Before & After Images -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 4rem;" class="reveal">
-                <div class="glass-card" style="padding: 1rem; text-align: center;">
-                    <h3 style="margin-bottom: 1rem; color: var(--text-secondary);">Předtím</h3>
-                    <img src="images/img2.jpg" alt="Předtím - zmatek" title="Předtím." style="width: 100%; border-radius: 8px;" loading="lazy">
-                </div>
-                <div class="glass-card" style="padding: 1rem; text-align: center;">
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Potom (ThreeS)</h3>
-                    <img src="images/img3.jpg" alt="Potom - pořádek" title="Potom." style="width: 100%; border-radius: 8px;" loading="lazy">
-                </div>
-            </div>
-
-            <div class="glass-card reveal" style="text-align: center; padding: 3rem;">
-                <h2>ThreeS je informační systém navržený speciálně pro malé firmy</h2>
-                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; margin-bottom: 2rem;">
-                    <div style="font-weight: bold;"><i class="fas fa-bolt" style="color: var(--accent-color); margin-right: 8px;"></i> Jednoduché nasazení</div>
-                    <div style="font-weight: bold;"><i class="fas fa-mouse-pointer" style="color: var(--accent-color); margin-right: 8px;"></i> Přehledné ovládání</div>
-                    <div style="font-weight: bold;"><i class="fas fa-ban" style="color: var(--accent-color); margin-right: 8px;"></i> Žádné složité implementace</div>
-                </div>
-                <p style="font-size: 1.2rem; font-weight: bold; color: var(--accent-color);">ERP systém bez složitosti velkých ERP systémů. Prostě ThreeS.</p>
-            </div>
-
-            <div class="has-text-centered" style="margin-top: 4rem; text-align: center;">
-                <a href="demo.html" class="btn btn-primary" style="margin-right: 1rem;">Vyzkoušejte ThreeS DEMO</a>
-                <a href="mailto:podpora@threes.cz" class="btn btn-outline">Domluvit konzultaci</a>
-            </div>
         </div>
     </section>
 
@@ -117,6 +147,7 @@
                         <li><a href="alternativa-excel.html">Alternativa k Excelu</a></li>
                         <li><a href="technicke-detaily.html">Technické detaily</a></li>
                         <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="threes-praxe.html">ThreeS v praxi</a></li>
                         <li><a href="demo.html">DEMO přístup</a></li>
                     </ul>
                 </div>
@@ -136,5 +167,4 @@
     <!-- Scripts -->
     <script src="script.js"></script>
 </body>
-
 </html>
