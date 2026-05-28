@@ -7,7 +7,7 @@
     <title>Software pro vedení zakázek pro malé firmy | ThreeS</title>
     <meta name="description" content="Informační systém pro malé firmy, kterým již Excel nestačí. Mějte zakázky, dokumenty a náklady na jednom místě díky softwaru na řízení zakázek ThreeS.">
     <meta name="keywords" content="software na řízení zakázek, informační systém pro malé firmy, správce informací, evidence zakázek">
-    <link rel="canonical" href="https://threes.cz/index.html">
+    <link rel="canonical" href="https://threes.cz/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -24,21 +24,77 @@
     <meta property="twitter:image" content="https://threes.cz/images/obrazek_1.jpg">
 
     <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "ThreeS",
-      "operatingSystem": "Windows",
-      "applicationCategory": "BusinessApplication",
-      "description": "Informační systém pro malé firmy pro vedení zakázek, dokumentů a nákladů.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "CZK"
-      }
-    }
-    </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "ThreeS",
+                    "url": "https://threes.cz/",
+                    "operatingSystem": "Windows",
+                    "applicationCategory": "BusinessApplication",
+                    "description": "Informační systém pro malé firmy pro vedení zakázek, dokumentů a nákladů.",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "CZK"
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "name": "ThreeS",
+                    "url": "https://threes.cz/",
+                    "logo": "https://threes.cz/images/logo_ThreeS.jpg",
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "contactType": "customer support",
+                            "email": "podpora@threes.cz",
+                            "telephone": "+420604748927",
+                            "availableLanguage": ["cs"]
+                        },
+                        {
+                            "@type": "ContactPoint",
+                            "contactType": "technical support",
+                            "email": "vyvoj@threes.cz",
+                            "telephone": "+420777581850",
+                            "availableLanguage": ["cs"]
+                        }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Pro koho je ThreeS určený?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "ThreeS je určený hlavně pro malé a středně malé firmy, které vedou zakázky, dokumenty a náklady a přestává jim stačit Excel nebo roztříštěné evidenční nástroje."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Co ThreeS řeší oproti Excelu?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "ThreeS spojuje zakázky, dokumenty, komunikaci, termíny i náklady do jednoho prostředí. Díky tomu odpadá ruční přepisování dat, hledání verzí souborů a nejasný stav zakázky."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Jak lze ThreeS vyzkoušet?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Zájemci mohou požádat o demo přístup, online ukázku systému nebo nezávaznou konzultaci, při které projdeme současný způsob evidence zakázek a navrhneme vhodný postup."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
     
     <link rel="icon" type="image/png" href="images/favicon_threes.png">
     <link rel="stylesheet" href="style.css">
@@ -110,6 +166,10 @@
     <!-- Funkce sekce stávající jako dříve, avšak s přesunem do kontextu v2 -->
     <section class="section">
         <div class="container">
+            <div class="reveal" style="text-align: center; max-width: 900px; margin: 0 auto 2rem auto;">
+                <h2>Co ThreeS řeší v malých firmách</h2>
+                <p>ThreeS pomáhá firmám sjednotit vedení zakázek, dokumentů, nákladů a odpovědností do jednoho systému, aby byl stav každé zakázky dohledatelný bez ručního skládání informací z více míst.</p>
+            </div>
             <div class="features-grid">
                 <div class="glass-card feature-card reveal">
                     <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
@@ -136,6 +196,27 @@
             
             <div class="has-text-centered" style="margin-top: 4rem; text-align: center;">
                 <a href="vedeni-zakazek.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">Další informace o vedení zakázek <i class="fas fa-arrow-right" style="margin-left: 10px;"></i></a>
+            </div>
+
+            <div class="faq-block reveal" style="margin-top: 5rem;">
+                <div class="faq-heading">
+                    <h2>Časté dotazy k systému ThreeS</h2>
+                    <p>Krátké odpovědi na nejčastější otázky firem, které řeší přechod z Excelu na systém pro řízení zakázek.</p>
+                </div>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Pro koho je ThreeS určený?</summary>
+                        <p>Pro malé firmy, které potřebují mít zakázky, dokumenty, komunikaci i náklady na jednom místě a chtějí odstranit chaos vznikající při práci v Excelu a e-mailu.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Jak ThreeS pomůže firmě, která dnes používá Excel?</summary>
+                        <p>Data se nezadávají opakovaně do více tabulek, dokumenty se vážou přímo k zakázce a odpovědní lidé vidí aktuální stav, termíny i ekonomiku bez ručního dohledávání.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Je možné si systém nejdřív vyzkoušet?</summary>
+                        <p>Ano. K dispozici je demo přístup, online ukázka systému i nezávazná konzultace, při které projdeme váš současný způsob evidence a ukážeme vhodné použití ThreeS.</p>
+                    </details>
+                </div>
             </div>
         </div>
     </section>
