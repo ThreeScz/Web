@@ -709,6 +709,16 @@ footer {
     margin: 1rem 0 0;
 }
 
+.faq-item a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.faq-item a:hover {
+    color: var(--text-primary);
+}
+
 /* Responsive */
 @media (max-width: 992px) {
 
