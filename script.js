@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Check for saved theme preference or use system preference
     const savedTheme = localStorage.getItem('threes-theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Výchozí vzhled je tmavý; světlý pouze po volbě návštěvníka.
     
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    if (savedTheme !== 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
         updateIcon(true);
     } else {
@@ -94,3 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// WhatsApp na počítači / telefonu; pokud aplikace není dostupná, uživatel může použít e-mail.
+document.querySelectorAll('.contact-whatsapp').forEach(a=>{a.title='Otevřít WhatsApp; pokud není dostupný, napište na podpora@threes.cz';});
