@@ -255,6 +255,46 @@ header.scrolled {
     font-weight: 700;
 }
 
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--text-secondary);
+    border-radius: 10px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-toggle svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.menu-toggle .menu-close-icon,
+.menu-toggle[aria-expanded="true"] .menu-open-icon {
+    display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-close-icon {
+    display: block;
+}
+
+.menu-toggle:focus-visible,
+.nav-links a:focus-visible {
+    outline: 3px solid var(--threes-yellow, #ffc107);
+    outline-offset: 3px;
+}
+
 /* Buttons & Controls */
 .btn {
     display: inline-flex;
@@ -741,9 +781,66 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-container > .logo {
+        margin-right: auto;
+        min-width: 0;
+    }
+
+    .nav-container > .theme-toggle {
+        flex-shrink: 0;
+    }
+
+    .menu-toggle:not([hidden]) {
+        display: inline-flex;
+        flex-shrink: 0;
+    }
+
     .nav-links {
         display: none;
-        /* Mobile menu could be added here */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        max-height: calc(100vh - 80px);
+        max-height: calc(100dvh - 80px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--text-secondary);
+        box-shadow: var(--glass-shadow);
+    }
+
+    .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    header .nav-links a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        color: var(--text-primary) !important;
+    }
+
+    header .nav-links a:hover,
+    header .nav-links a.nav-active {
+        background: var(--accent-light);
+        color: var(--text-primary) !important;
+    }
+
+    header .nav-links a::after {
+        display: none;
     }
 
     .section {

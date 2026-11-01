@@ -15,7 +15,7 @@
 <meta content="Aktuální zvýhodněná nabídka systému ThreeS a informace o podmínkách akce." property="og:description"/>
 <meta content="https://threes.cz/images/akce-vyroci-2026-final.png" property="og:image"/>
 <link href="images/favicon_threes.png" rel="icon" type="image/png"/>
-<link href="style.css?v=20261031-17" rel="stylesheet"/>
+<link href="style.css?v=20261101-mobile-menu" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 </head>
 <body class="page-akce">
@@ -29,7 +29,11 @@
 <a class="logo" href="index.html">
 <img alt="ThreeS – oficiální logo" id="nav-logo" src="images/logo_ThreeS_final.png"/>
 </a>
-<nav class="nav-links"><a href="index.html">Úvod</a><a href="vedeni-zakazek.html">Vedení zakázek</a><a href="funkce.html">Funkce ThreeS</a><a href="technicke-detaily.html">Technické detaily</a><a href="faq.html">FAQ</a><a href="threes-praxe.html">ThreeS v praxi</a><a href="akce.html">Akce</a><a href="o-nas.html">O nás</a><a href="demo.html">DEMO</a><a href="kontakt.html">Kontakt</a></nav>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="Otevřít menu" class="menu-toggle" hidden type="button">
+<svg aria-hidden="true" viewBox="0 0 24 24"><path class="menu-open-icon" d="M3 6h18M3 12h18M3 18h18"/><path class="menu-close-icon" d="m6 6 12 12M18 6 6 18"/></svg>
+<span>Menu</span>
+</button>
+<nav aria-label="Hlavní navigace" class="nav-links" id="primary-navigation"><a href="index.html">Úvod</a><a href="vedeni-zakazek.html">Vedení zakázek</a><a href="funkce.html">Funkce ThreeS</a><a href="technicke-detaily.html">Technické detaily</a><a href="faq.html">FAQ</a><a href="threes-praxe.html">ThreeS v praxi</a><a href="akce.html">Akce</a><a href="o-nas.html">O nás</a><a href="demo.html">DEMO</a><a href="kontakt.html">Kontakt</a></nav>
 <button aria-label="Přepnout motiv" class="theme-toggle" id="theme-toggle">
 <i class="fas fa-moon"></i>
 </button>
@@ -72,6 +76,6 @@
 </div>
 </footer>
 <script src="cookie-consent.js"></script>
-<script src="script.js"></script>
+<script src="script.js?v=20261101-mobile-menu"></script>
 <script src="year.js"></script><script src="akce-visibility.js"></script></body>
 </html>

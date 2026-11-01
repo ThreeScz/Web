@@ -1,5 +1,41 @@
 /* script.js */
 document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.getElementById('primary-navigation');
+    const mobileViewport = window.matchMedia('(max-width: 768px)');
+
+    if (menuToggle && navigation) {
+        const setMenuOpen = (open, restoreFocus = false) => {
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? 'Zavřít menu' : 'Otevřít menu');
+            navigation.classList.toggle('is-open', open);
+            if (restoreFocus) menuToggle.focus();
+        };
+
+        menuToggle.addEventListener('click', () => {
+            setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+        });
+        navigation.addEventListener('click', (event) => {
+            if (event.target.closest('a')) setMenuOpen(false);
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+                setMenuOpen(false, true);
+            }
+        });
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('header')) setMenuOpen(false);
+        });
+        document.addEventListener('focusin', (event) => {
+            if (!event.target.closest('header')) setMenuOpen(false);
+        });
+        mobileViewport.addEventListener('change', () => {
+            const focusInMenu = navigation.contains(document.activeElement);
+            setMenuOpen(false, mobileViewport.matches && focusInMenu);
+        });
+        menuToggle.hidden = false;
+    }
+
     // Theme toggling functionality
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle.querySelector('i');
