@@ -7,8 +7,8 @@
     --bg-secondary: #ffffff;
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --accent-color: #3b82f6;
-    --accent-hover: #2563eb;
+    --accent-color: #26558a;
+    --accent-hover: #1d426d;
     --accent-light: rgba(59, 130, 246, 0.1);
 
     --header-bg: rgba(255, 255, 255, 0.8);
@@ -26,8 +26,8 @@
     --bg-secondary: #1e293b;
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
-    --accent-color: #60a5fa;
-    --accent-hover: #93c5fd;
+    --accent-color: #7ea5d0;
+    --accent-hover: #a7c4e2;
     --accent-light: rgba(96, 165, 250, 0.15);
 
     --header-bg: rgba(15, 23, 42, 0.85);
@@ -255,6 +255,46 @@ header.scrolled {
     font-weight: 700;
 }
 
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--text-secondary);
+    border-radius: 10px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-toggle svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.menu-toggle .menu-close-icon,
+.menu-toggle[aria-expanded="true"] .menu-open-icon {
+    display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-close-icon {
+    display: block;
+}
+
+.menu-toggle:focus-visible,
+.nav-links a:focus-visible {
+    outline: 3px solid var(--threes-yellow, #ffc107);
+    outline-offset: 3px;
+}
+
 /* Buttons & Controls */
 .btn {
     display: inline-flex;
@@ -332,10 +372,7 @@ header.scrolled {
 
 .hero-content h1 {
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--text-primary), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
 }
 
 .hero-actions {
@@ -744,9 +781,66 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-container > .logo {
+        margin-right: auto;
+        min-width: 0;
+    }
+
+    .nav-container > .theme-toggle {
+        flex-shrink: 0;
+    }
+
+    .menu-toggle:not([hidden]) {
+        display: inline-flex;
+        flex-shrink: 0;
+    }
+
     .nav-links {
         display: none;
-        /* Mobile menu could be added here */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        max-height: calc(100vh - 80px);
+        max-height: calc(100dvh - 80px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--text-secondary);
+        box-shadow: var(--glass-shadow);
+    }
+
+    .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    header .nav-links a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0.5rem 0.75rem;
+        border-radius: 8px;
+        color: var(--text-primary) !important;
+    }
+
+    header .nav-links a:hover,
+    header .nav-links a.nav-active {
+        background: var(--accent-light);
+        color: var(--text-primary) !important;
+    }
+
+    header .nav-links a::after {
+        display: none;
     }
 
     .section {
@@ -826,4 +920,232 @@ footer {
 [data-tooltip]:hover::before {
     opacity: 1;
     visibility: visible;
+}
+
+/* ThreeS 2026 – sjednocené vizuální prvky */
+:root { --threes-blue: #26558a; --threes-red: #bd2434; --threes-green: #788b38; }
+.logo img, [data-theme="dark"] .logo img { filter: none !important; mix-blend-mode: normal !important; height: 48px; }
+.nav-links { flex-wrap: wrap; gap: .8rem !important; }
+.nav-links a { font-size: .88rem; }
+.feature-grid-v2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.25rem; margin:2rem 0; }
+.feature-grid-v2 .glass-card, .feature-grid-v2 .detail-section { padding:1.5rem; }
+.feature-grid-v2 h2 { font-size:1.25rem; }
+.action-panel { padding:2.5rem; border-top:5px solid var(--threes-red); }
+.action-panel h2 { color:var(--threes-red); }
+.faq-block { max-width:1000px; margin:auto; }
+.hero-content h1 { line-height:1.18; }
+@media(max-width:750px) {.logo img,[data-theme="dark"] .logo img{height:38px}.action-panel{padding:1.25rem}}
+
+/* ThreeS – třetí pracovní verze */
+:root {--threes-yellow:#ffc107;--threes-green:#88954a;--threes-red:#bd2434;}
+.logo img,[data-theme="dark"] .logo img {height:58px !important;filter:none !important;}
+.nav-links a {font-size:1rem !important;color:#fff !important;}
+.nav-links a.nav-active,.nav-links a:hover {color:rgb(255,193,7) !important;}
+.nav-links a.nav-active::after {background:rgb(255,193,7) !important;}
+header {background:#121d30 !important;}
+.demo-cta {background:var(--threes-red) !important;border-color:var(--threes-red) !important;color:#fff !important;}
+.homepage-motto {font-size:1.5rem;font-weight:700;margin-top:1.2rem;color:var(--text-primary);}
+.contact-methods {font-size:.8rem;white-space:nowrap;color:var(--text-secondary);}
+.full-width-detail {grid-column:1/-1;width:100%;}
+.faq-block {margin-bottom:2rem;}
+.action-hero {min-height:300px;padding:3rem;display:flex;flex-direction:column;justify-content:center;border-top:5px solid var(--threes-red);background:linear-gradient(120deg,rgba(189,36,52,.14),transparent 65%);}
+.action-hero h2 {color:var(--threes-red);}
+.equal-case-card,.about-equal {height:100%;}
+.about-wide {width:100%;grid-column:1/-1;}
+.about-wide img {max-width:100%;height:auto;display:block;margin:1.5rem auto;}
+/* Nadpisy, symboly a aktivní navigace v teplé žlutooranžové */
+body:has(.feature-grid-v2) .detail-section h3 {color:#ffc107 !important;}
+.feature-icon i {color:#ffc107 !important;}
+@media(max-width:950px){.nav-links a{font-size:.9rem !important}.logo img,[data-theme="dark"] .logo img{height:49px !important}}
+
+/* ThreeS – pracovní verze 04 */
+:root{--threes-yellow:#ffc107;--threes-red:#bd2434;--threes-green:#88954a}
+.logo img,[data-theme="dark"] .logo img{height:67px !important}
+@media(max-width:950px){.logo img,[data-theme="dark"] .logo img{height:56px !important}}
+.nav-links a:hover::after,.nav-links a.nav-active::after{background:var(--threes-yellow) !important}
+.demo-cta{box-shadow:0 2px 16px rgba(255,255,255,.34) !important}
+.footer-col .contact-methods{display:block;margin-left:20px;margin-top:3px;font-size:.82rem}
+.footer-contact p a[href^="tel:"]{white-space:nowrap}
+.footer-contact i{color:var(--threes-yellow) !important}
+.footer-col .logo+p{font-size:1.12rem !important;line-height:1.5}
+.center-heading{text-align:center}
+body:has(.feature-grid-v2) .detail-section h3,body:has(.feature-grid-v2) .detail-section h3 i{color:var(--threes-yellow) !important}
+body:has(.feature-grid-v2) .detail-section:last-child{grid-column:1/-1}
+body:has(.feature-grid-v2) .detail-section h3 .fa-plus,.fa-plus{color:var(--threes-yellow)}
+body:has(.page-header) .fa-rocket,body:has(.page-header) .fa-desktop,body:has(.page-header) .fa-stopwatch{color:var(--threes-yellow) !important}
+body:has(.page-header) .fa-check{color:var(--threes-yellow) !important}
+.case-orange{border:1px solid var(--threes-yellow) !important}.case-red{border:1px solid var(--threes-red) !important}
+.case-orange li,.case-red li{color:#fff;list-style:none !important}.case-orange li::before,.case-red li::before{content:'✓';color:#fff;margin-right:.65rem;font-weight:800}
+.about-story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;align-items:stretch}.about-story-grid>.glass-card{height:100%;margin:0 !important}
+@media(max-width:760px){.about-story-grid{grid-template-columns:1fr}}
+.bonsai-description{text-align:center;font-size:1.15rem;line-height:1.7;max-width:850px;margin:1.4rem auto 0}
+body:has(.contact-page) a:not(.btn):hover{color:var(--threes-yellow)}
+
+/* ThreeS pracovní verze 05 – sjednocení požadovaných barev a rozložení */
+:root { --threes-green:#74b83f; --threes-yellow:#ffc107; }
+.more-info-white, a.more-info-white, a.more-info-white.btn-outline { background:#fff !important;color:#252525 !important;border-color:#fff !important; }
+.more-info-white:hover { background:#f1f1f1 !important; }
+.footer-slogan-white {color:#fff !important;}
+.homepage-motto {margin-top:1rem;}
+.hero-actions {margin-bottom:1.25rem;}
+
+
+.feature-icon .fa-ban,.feature-icon .fa-times-circle {color:var(--threes-yellow) !important;}
+.process-illustration {grid-column:1/-1;text-align:center;margin:2rem auto;width:100%;}
+.centered-cta {text-align:center !important;}
+.centered-cta p {text-align:center;}
+.case-solution-green {border:1px solid var(--threes-green) !important;}
+.case-solution-green h2 {color:var(--threes-green) !important;}
+.detail-list li {list-style:none !important;}
+.case-orange .detail-list li::before,.case-red .detail-list li::before {content:'✓' !important;color:#fff !important;margin-right:.7rem;}
+.case-orange .detail-list li,.case-red .detail-list li {color:#fff !important;}
+.faq-item summary::after,.faq-item a {color:var(--threes-yellow) !important;}
+.technical-card i,.tech-card i {color:var(--threes-yellow) !important;}
+
+/* ThreeS v06 */
+:root,[data-theme="dark"]{--accent-color:#ffc107;--accent-hover:#e4a900;--accent-light:rgba(255,193,7,.13)}
+.nav-links a::after,.nav-links a:hover::after,.nav-links a.nav-active::after{background:#ffc107 !important}
+.theme-toggle,.theme-toggle i,.theme-toggle:hover{color:#ffc107 !important}
+.theme-toggle:hover{background:rgba(255,193,7,.18) !important}
+.footer-legal-links a,.footer-legal-links a:hover,.cookie-banner a,.cookie-banner a:hover{color:#ffc107 !important}
+.cookie-banner .btn,.cookie-banner button{border-color:#ffc107 !important}
+.cookie-banner .btn-primary{background:#ffc107 !important;color:#161616 !important}
+.cookie-banner .btn-outline{color:#ffc107 !important;background:transparent !important}
+
+.check-only{list-style:none !important}
+.check-only::before,.check-only::after{content:none !important;display:none !important}
+.check-only .fa-check{color:#ffc107 !important}
+
+body:has(.contact-page) a[href="demo.html"]{color:#ffc107 !important}
+.centered-cta .btn + .btn,.centered-cta a.btn + a.btn{margin-left:.65rem}
+
+/* v07: page-specific styles, avoiding cross-page inheritance */
+.page-index .hero-content h1{color:#fff !important}
+:root:not([data-theme="dark"]) .page-index .hero-content h1{color:#202631 !important}
+.page-index .home-three-card{border:1px solid rgb(255,193,7) !important}
+.page-index .hero-actions{margin-bottom:.35rem !important}
+.page-index .home-line-small{font-size:14px !important}
+.page-index .home-line-medium{font-size:18px !important}
+.page-index .homepage-motto{font-size:22px !important}
+.page-vedeni-zakazek .jobs-comparison-1{border:2px solid #bd2434 !important}
+.page-vedeni-zakazek .jobs-comparison-2{border:2px solid #74b83f !important}
+.page-vedeni-zakazek .jobs-info-card{border:2px solid #ffc107 !important}
+.page-vedeni-zakazek .jobs-comparison .detail-list li{color:#fff !important}
+.page-vedeni-zakazek .jobs-comparison .detail-list li::before{content:'✓' !important;color:#fff !important}
+.page-technicke-detaily .tech-specific-card{border:1px solid #ffc107 !important}
+.page-technicke-detaily .tech-specific-card .detail-list li::before{content:'✓' !important;color:#fff !important}
+.page-technicke-detaily .tech-specific-card h3 i{color:#ffc107 !important}
+.page-technicke-detaily .features-grid{margin-bottom:2rem !important}
+.page-o-nas .about-specific-card{border:1px solid rgb(255,193,7) !important}
+.page-o-nas .about-question-heading{color:#fff !important}
+:root:not([data-theme="dark"]) .page-o-nas .about-question-heading{color:#fff !important}
+.page-kontakt .contact-specific-1{border-top:4px solid var(--threes-red) !important}
+.page-kontakt .contact-specific-1>i,.page-kontakt .contact-specific-1>p{color:var(--threes-red) !important}
+.page-kontakt .contact-specific-2{border-top:4px solid var(--threes-green) !important}
+.page-kontakt .contact-specific-2>i,.page-kontakt .contact-specific-2>p:first-of-type{color:var(--threes-green) !important}
+.page-kontakt .contact-specific-3{border-top:4px solid #8b5cf6 !important}
+.page-kontakt .contact-specific-3>i,.page-kontakt .contact-specific-3>p{color:#8b5cf6 !important}
+.page-kontakt .contact-specific-4{border-top:4px solid #f59e0b !important}
+.page-kontakt .contact-specific-4>i,.page-kontakt .contact-specific-4>p:first-of-type{color:#f59e0b !important}
+.page-funkce img.features-reduced-image{max-width:66.67% !important;height:auto !important}
+:root:not([data-theme="dark"]) .footer-slogan-white{color:var(--text-primary) !important}
+:root:not([data-theme="dark"]) .page-threes-praxe .case-orange p,
+:root:not([data-theme="dark"]) .page-threes-praxe .case-orange strong,
+:root:not([data-theme="dark"]) .page-threes-praxe .case-orange .detail-list li{color:#202631 !important}
+:root:not([data-theme="dark"]) .page-threes-praxe .case-orange .detail-list li::before{color:#202631 !important}
+.more-info-white,a.more-info-white,a.more-info-white.btn-outline{background:#e5e7eb !important;border-color:#d1d5db !important;color:#252525 !important}
+.more-info-white:hover{background:#d1d5db !important}
+
+/* v08 - action only */
+.nav-links a.akce-menu-link:not(:hover):not(.nav-active){color:var(--threes-red,#d00019)!important}.nav-links a.akce-menu-link:hover,.nav-links a.akce-menu-link.nav-active{color:#ffc107!important}.page-akce .action-hero{position:relative;padding:0;overflow:hidden;max-width:100%;border-color:var(--threes-red,#d00019)}.page-akce .action-demo-overlay{position:absolute;left:2.1%;top:87.2%;width:32.8%;height:10.8%;border-radius:12px;z-index:2;cursor:pointer}.page-akce .action-demo-overlay:focus-visible{outline:3px solid #ffc107;outline-offset:-3px}
+
+/* v09: pouze Akce – tučnost položky a přesné souřadnice tlačítka v novém obrázku */
+.nav-links a.akce-menu-link {font-weight:700 !important}
+.page-akce .action-demo-overlay {
+  left:4.45%; top:60.0%; width:30.5%; height:4.1%;
+}
+
+/* v10: scoped contrast fixes; no other pages or color themes affected */
+:root:not([data-theme="dark"]) .page-vedeni-zakazek .jobs-comparison .detail-list li,
+:root:not([data-theme="dark"]) .page-vedeni-zakazek .jobs-comparison .detail-list li::before,
+:root:not([data-theme="dark"]) .page-threes-praxe .case-red .detail-list li,
+:root:not([data-theme="dark"]) .page-threes-praxe .case-red .detail-list li::before {color:#202631 !important}
+
+
+/* v13 – targeted spacing, illustration sizes and typography */
+@media (min-width: 769px) {
+  .page-index .hero { min-height: calc(100vh - 80px); }
+}
+.page-faq .faq-illustration { margin-top: .5rem !important; }
+.page-faq .faq-illustration .features-reduced-image { max-width: 733px; }
+.page-technicke-detaily .threes-new-illustration { max-width: 733px !important; }
+.page-threes-praxe .practice-illustration { max-width: 733px !important; margin-left: auto !important; margin-right: auto !important; }
+.footer-slogan-white { font-size: calc(0.95rem - 1pt) !important; }
+.page-vedeni-zakazek .excel-seo-intro { text-align: center; font-size: 1.125rem; line-height: 1.7; max-width: 900px; margin: 0 auto 2rem; }
+
+/* v14 – final targeted layout corrections */
+/* Remove the conflicting inherited footer font-size and align slogan with logo. */
+.footer-col .logo + .footer-slogan-white {
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+  margin: 0.1rem 0 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+.footer-col > .logo { margin-bottom: 0 !important; }
+/* Text about replacing Excel: more prominent without changing its location. */
+.page-vedeni-zakazek .excel-seo-intro {
+  font-size: 1.32rem !important;
+  line-height: 1.65 !important;
+  text-align: center !important;
+}
+/* Both showcase pictures without a glass-card frame, padding, or shadow. */
+.page-index .hero-illustration-plain,
+.page-threes-praxe .practice-illustration-plain {
+  background: transparent !important; border: 0 !important;
+  padding: 0 !important; box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+.page-index .hero-illustration-plain img,
+.page-threes-praxe .practice-illustration-plain img {
+  display: block; max-width: 100%; height: auto; margin: 0 auto;
+}
+/* 80% of previous 733px illustration width, responsive on narrow screens. */
+.page-faq .faq-illustration .features-reduced-image { max-width: 586px !important; }
+.page-technicke-detaily .threes-new-illustration { max-width: 586px !important; }
+.page-threes-praxe .practice-illustration { max-width: 586px !important; }
+
+/* v15 – footer slogan aligned with the VISIBLE logo artwork.
+   Logo PNG contains 187px of transparent left padding in a 716px-high canvas. */
+.footer-grid > .footer-col:first-child { --footer-logo-height: 67px; }
+.footer-grid > .footer-col:first-child > .footer-slogan-white {
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+  padding: 0 !important;
+  margin: -0.35rem 0 0 calc(var(--footer-logo-height) * 0.26117) !important;
+  text-align: left !important;
+}
+.footer-grid > .footer-col:first-child > .logo { margin-bottom: 0 !important; }
+@media (max-width: 950px) {
+  .footer-grid > .footer-col:first-child { --footer-logo-height: 56px; }
+}
+/* v15 – breathing room above the ThreeS in practice screenshot */
+.page-threes-praxe .practice-illustration { margin-top: 2rem !important; }
+
+/* v16 – development note and balanced illustration spacing */
+.page-funkce .continuous-development-note {
+  text-align: center; font-size: 1.18rem; line-height: 1.55;
+  max-width: 920px; margin: 2.25rem auto 1.2rem;
+  color: var(--text-primary);
+}
+.page-threes-praxe .practice-illustration {
+  margin-top: 5rem !important; margin-bottom: 5rem !important;
+}
+
+/* v17 – development note spans the entire Bonus column width */
+.page-funkce .feature-grid-v2 > .continuous-development-note {
+  grid-column: 1 / -1; width: 100%; max-width: none;
+  box-sizing: border-box; margin: 2.25rem 0 1.2rem;
+  font-size: clamp(1.35rem, 2.1vw, 1.65rem);
+  line-height: 1.55; text-align: center;
 }
