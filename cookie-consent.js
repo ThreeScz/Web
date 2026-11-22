@@ -1,4 +1,4 @@
-/* Cookie consent and deferred Google Analytics loading for ThreeS. */
+/* Cookie consent and deferred analytics loading (Google Analytics + Leadfeeder) for ThreeS. */
 (() => {
     'use strict';
 
@@ -66,6 +66,19 @@
         analyticsScript.dataset.threesAnalytics = 'true';
         document.head.appendChild(analyticsScript);
         window.__threeSAnalyticsLoaded = true;
+
+        // Leadfeeder is loaded only after the visitor accepts optional analytics.
+        if (!window.__threeSLeadfeederLoaded) {
+            window.ldfdr = window.ldfdr || function () {
+                (window.ldfdr._q = window.ldfdr._q || []).push([].slice.call(arguments));
+            };
+            const leadfeederScript = document.createElement('script');
+            leadfeederScript.src = 'https://sc.lfeeder.com/lftracker_v1_p1e024BVRrK4GB6d.js';
+            leadfeederScript.async = true;
+            leadfeederScript.dataset.threesLeadfeeder = 'true';
+            document.head.appendChild(leadfeederScript);
+            window.__threeSLeadfeederLoaded = true;
+        }
     };
 
     const saveConsent = (choice) => {
@@ -105,7 +118,7 @@
         banner.innerHTML = `
             <div class="cookie-banner__content">
                 <h2 id="cookie-consent-title">Cookies a soukromí</h2>
-                <p>Web používá technické úložiště pro zapamatování motivu a volitelné analytické cookies Google Analytics. Analytické cookies aktivujeme pouze po vašem souhlasu.</p>
+                <p>Web používá technické úložiště pro zapamatování motivu a volitelné analytické nástroje Google Analytics a Leadfeeder. Analytické nástroje aktivujeme pouze po vašem souhlasu.</p>
                 <a href="ochrana-soukromi.html">Více informací o cookies a soukromí</a>
             </div>
             <div class="cookie-banner__actions">
