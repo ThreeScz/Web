@@ -2,7 +2,7 @@
 (() => {
     'use strict';
 
-    const CONSENT_KEY = 'threes-cookie-consent-v1';
+    const CONSENT_KEY = 'threes-cookie-consent-v2';
     const ANALYTICS_ID = 'G-LF1TDYRYJ9';
     const ACCEPTED_FOR_MS = 365 * 24 * 60 * 60 * 1000;
     const DECLINED_FOR_MS = 180 * 24 * 60 * 60 * 1000;
